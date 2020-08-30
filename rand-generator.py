@@ -35,3 +35,22 @@ password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + lowercaseLet
 password = shuffle(password)
 print(password)
 
+#Generating 50 passwords
+for i in range(50):
+    uppercaseLetter1=chr(random.randint(65,90)) #Generate a random Uppercase letter (based on ASCII code)
+    uppercaseLetter2=chr(random.randint(65,90)) #Generate a random Uppercase letter (based on ASCII code
+    lowercaseLetter1=chr(random.randint(97,122)) #Generate a random lowercase letter (based on ASCII code)
+    lowercaseLetter2=chr(random.randint(97,122)) #Generate a random lowercase letter (based on ASCII code)
+    digit1=chr(random.randint(48,57)) #Generate a random digit (based on ASCII code)
+    digit2=chr(random.randint(48,57)) #Generate a random digit (based on ASCII code)
+    punctuationsign1=chr(random.randint(33,96)) #Generate a random punctuation sign (based on ASCII code)
+    punctuationsign2=chr(random.randint(33,96)) #Generate a random punctuation sign (based on ASCII code)
+
+    #Combining the generated pairs and calling the shuffle function
+    password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + lowercaseLetter2 + digit1 + digit2 + punctuationsign1 + punctuationsign2
+    password = shuffle(password)
+    print(password)
+
+endtime = datetime.datetime.now()
+totaltime = endtime - starttime
+print(totaltime)
