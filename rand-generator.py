@@ -49,8 +49,11 @@ for i in range(50):
     #Combining the generated pairs and calling the shuffle function
     password = uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter1 + lowercaseLetter2 + digit1 + digit2 + punctuationsign1 + punctuationsign2
     password = shuffle(password)
+    #Output
     print(password)
 
 endtime = datetime.datetime.now()
+#Time difference
 totaltime = endtime - starttime
+#Output
 print(totaltime)
